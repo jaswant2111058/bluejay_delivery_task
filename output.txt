@@ -45,3 +45,13 @@ Employee have less than 10 hours of time between shifts but greater than 1 hour 
 
 
 
+Employee has worked for more than 14 hours in a single shift = {
+
+        [ 'DeXgadiXXE REdarMe, ChrisMiaW S' ]
+
+}
+
+
+
+
+-------------------------------------------------------------------------------

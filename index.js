@@ -1,7 +1,7 @@
 // Required modules
-const fs = require('fs');
-const csv = require('csv');
-const _ = require('lodash');
+const fs = require('fs'); // Node.js module for file system operations
+const csv = require('csv'); // Library for parsing CSV files
+const _ = require('lodash'); // Library for utility functions
 
 // Specify the path to your CSV file
 const csvFilePath = "./Assignment_Timecard.csv";
@@ -40,8 +40,8 @@ csv.parse(fileContent, { columns: true }, (error, employeeData) => {
         // Iterate over the employee data
         for (let i = 1; i < employeeData.length - 1; i++) {
             // Extract 'Time Out' date for the current entry and 'Time' date for the next entry
+            const commingDate = new Date(employeeData[i]['Time']);
             const departureDate = new Date(employeeData[i]['Time Out']);
-            const nextComeDate = new Date(employeeData[i + 1]['Time']);
 
             // Extract employee name
             const name = employeeData[i]['Employee Name'];
@@ -50,11 +50,9 @@ csv.parse(fileContent, { columns: true }, (error, employeeData) => {
             if (name !== employeeName) {
                 employeeName = name;
             }
-            // Check if the hour difference between 'Time Out' and the next 'Time' is between 1 and 10
-            // and the dates are the same
-            else if (calculateHourDifference(departureDate, nextComeDate) > 1 &&
-                calculateHourDifference(departureDate, nextComeDate) < 10 &&
-                departureDate.getDate() === nextComeDate.getDate()) {
+           
+            // Check if the hour difference between 'Time' and 'Time Out' is greater than 14 hours
+            else if (calculateHourDifference(commingDate, departureDate) > 14) {
                 employeeWith10hours.push(employeeName);
             }
         }
