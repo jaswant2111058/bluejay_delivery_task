@@ -1,0 +1,47 @@
+
+
+----------------------------------------------------------------------------------
+
+
+Employee Who Worked for 7 consecutive days = {
+
+            [
+                'Sparks, KeWWeMh',
+                'SiWgh, JaspreeM',
+                'CEreira Jr, JEse',
+                'GAeWdia, JAaW CarXEs'
+            ]
+
+}
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+
+
+Employee have less than 10 hours of time between shifts but greater than 1 hour = {
+
+
+                [
+                        'CaMaXaWE, CeghaW',
+                        'Xee, XaCar',
+                        'De Xa Cerda, IgWaciE',
+                        'CEreira Jr, JEse',
+                        'DeXgadiXXE REdarMe, ChrisMiaW S',
+                        'HaCiXMEW, DeaWMe DevEW',
+                        'REdrigAez, GraWdEW AWgeX'
+                ]
+
+
+}
+
+
+
+
+-----------------------------------------------------------------------------------
+
+
+
+
